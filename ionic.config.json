@@ -1,0 +1,14 @@
+{
+  "name": "pliva-event-app",
+  "app_id": "4dde9c27",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://www.eventfingere.com"
+    }
+  ]
+}

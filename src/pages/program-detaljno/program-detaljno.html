@@ -1,0 +1,44 @@
+<!--
+  Generated template for the ProgramDetaljnoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PROGRAM</ion-title>
+    <button class="omiljeno" (click)="addOmiljeno(danProgram)">FAVORITE</button>
+  </ion-navbar>
+    
+    
+</ion-header>
+
+
+<ion-content padding>
+	<div class="osnovneInfo">
+      <p class="programTitle item-text-wrap" [innerHTML]="danProgram.post_title"></p>
+      <p class="programMjesto" [innerHTML]="danProgram.vrijeme"></p>
+      <p class="programVrijeme" [innerHTML]="danProgram.mjesto"></p>
+    </div>
+    <div class="opisPrograma">
+      <h2>Opis:</h2>
+      <p class="opis" [innerHTML]="danProgram.post_content"></p>
+    </div>
+    <div class="predavac">
+      <h2>Predavači:</h2>
+      <div *ngFor="let predavac of predavaciProgram">
+         <button ion-item text-wrap (click)="openPredavac(predavac)">
+            <div class="predavacIMG">
+              <img [src]="predavac.slika_predavaca.guid"/>
+            </div>
+            <div class="predavacOpis">
+              <span class="opis" [innerHTML]="predavac.post_title"></span>
+              <span class="opis" [innerHTML]="predavac.post_content"></span>
+            </div>
+       </button>
+      	
+      </div>
+      <button class="pitanje" (click)="openPitanje(predavaciProgram)">PITAJ PREDAVAČA</button>
+    </div>
+</ion-content>

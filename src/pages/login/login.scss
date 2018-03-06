@@ -1,0 +1,70 @@
+page-login {
+.loginLogo {
+	    width: 175px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+.loginContainer {
+position: absolute;
+    top: 0;
+    left:0;
+    bottom: 35px;
+    background-color: #fff;
+    right: 50px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0 0 12px 0 rgba(0,0,0,0.20);
+}
+ion-content {
+	background-image: url("../../assets/imgs/loginBG.png");
+	    background-size: cover
+}
+ion-input {
+	    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    border: 0.6px solid #DDD;
+    border-radius: 5px;
+}
+.text-input {
+	text-align: center;
+    color: #2C2C2C;
+    font-family: "gorditaregular";
+    font-size: 15px;
+    margin: 15px 0;
+}
+.inputHolder {
+	    margin-bottom: 20px;
+}
+.loginButton {
+	letter-spacing: 4px;
+	font-family: "gorditaregular";
+	    width: 80%;
+    margin: 0 auto;
+    display: block;
+    padding: 15px 0;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #5D6DBD;
+}
+.loginFooter {
+	width: 80%;
+    left: 10%;
+    position: absolute;
+    bottom: 10px;
+}
+.loginFooter img {
+    width: 136px;
+    display: block;
+    padding: 45px 0 25px 0;
+    margin: 0 auto;
+}
+.verzija {
+	font-size: 11px;
+	color:#A0A0A0;
+}
+}
+

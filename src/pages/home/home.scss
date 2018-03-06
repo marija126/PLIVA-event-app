@@ -1,0 +1,59 @@
+
+.homeHeading {
+	text-align: center;
+	padding-top:15px;
+}
+.homeHeading h1 {
+	font-family: 'gorditaregular';
+    font-size: 32px;
+    color:#2C2C2C;
+}
+.homeHeading span {
+	font-family: 'gorditaregular';
+    font-size: 24px;
+    color:#2C2C2C;
+}
+.introText {
+	text-align: center;
+	padding: 15px 40px;
+}
+p {
+	font-family: 'gorditaregular';
+    font-size: 15px;
+    line-height: 24px;
+    color:#2C2C2C;
+}
+.goButton {
+    text-align: center;
+    font-family: 'gorditaregular';
+    font-size: 17px;
+    color: #4A90E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 0 auto;
+    background: transparent;
+}
+.goButton:after {
+    content: "";
+    display: inline-block;
+    background: url(../assets/imgs/arrow.png) no-repeat;
+    width: 18px;
+    height: 14px;
+    margin-left: 20px;
+    background-size: contain;
+}
+.pokreni {
+	width: 100%;
+}
+.plvLogoHome {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.plvLogoHome img {
+	width: 30%;
+    position: absolute;
+    bottom: 10px;
+}

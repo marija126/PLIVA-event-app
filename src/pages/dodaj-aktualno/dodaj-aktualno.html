@@ -1,0 +1,35 @@
+<!--
+  Generated template for the DodajAktualnoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+   
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div class="inputHolder">
+		<ion-input type="text" placeholder="content" [(ngModel)]="content"></ion-input>
+	</div>
+	<div class="inputHolder">
+		<ion-input type="text" placeholder="autor" [(ngModel)]="autor"></ion-input>
+	</div>
+	<div class="inputHolder">
+		<button block (click)="getPhoto()">DODAJ SLIKU</button>
+	</div>
+	<img [src]="imageURL" [hidden]="hideImage" style="width: 100%;" />
+	
+	<button class="loginButton" (click)="addAktualno()">DODAJ</button>
+	<button class="loginButton" (click)="presentAlert()">ALERT</button>
+	<button class="loginButton" (click)="uploadPhoto()">DODAJ SLIKU</button>
+
+	<div>
+		<ion-input type="text" placeholder="{{resClean}}">{{resJSON}}</ion-input>
+	</div>
+</ion-content>
