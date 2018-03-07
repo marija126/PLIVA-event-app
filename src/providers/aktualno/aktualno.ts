@@ -17,8 +17,8 @@ api_url = environment.site_url+environment.aktualno_url;
   }
   getAktualno() {
   	return this.http.get(this.api_url);
-      
   }
+
 postAktualno(title, content, autor, slika) {
  let data = {
  	title: 'Post aktualno',

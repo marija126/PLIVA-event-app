@@ -16,6 +16,20 @@
 </ion-header>
  
 <ion-content padding>
-  This page has no tabs!
+  <div  class="aktualnoContainer">
+    <div class="aktualnoHolder" *ngFor="let akt of aktualno">
+      <div class="aktualnoHeading" *ngFor="let autor of akt.autor">
+        <img [src]="autor.slika_sudionik"/>
+        <p class="autorAktualno">{{autor.first_name}} {{autor.last_name}}</p>
+      </div>
+      <div class="aktualnoIMG">
+        <img [src]="akt.aktualno_slika"/>
+        <p class="tekstAktualno" [innerHTML]="akt.post_tekst"></p>
+      </div>
+      <div class="likeAktualno">
+        <button class="likes" (click)="addLike($event)">{{akt.likes}} likes</button>
+      </div>
+    </div>
+  </div>
   <button class="add" (click)="goToCreateAkutalno()"><img src="../../assets/imgs/plus.png"/></button>
 </ion-content>

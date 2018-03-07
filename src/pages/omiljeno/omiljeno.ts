@@ -72,7 +72,7 @@ public static updateUserStatus: Subject<boolean> = new Subject();
   	this.user = JSON.parse(localStorage.getItem('wpToken'));
 	console.log(this.user)
   }
-      presentLoading() {
+  presentLoading() {
     this.loader = this.loadingCtrl.create({
     });
     this.loader.present();

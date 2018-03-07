@@ -70,12 +70,12 @@ getPhoto (selectedSourceType:number) {
         {
           text: 'Snimi fotografiju',
           handler: () => {
-            this.getPhoto(this.camera.PictureSourceType.PHOTOLIBRARY);
+            this.getPhoto(this.camera.PictureSourceType.CAMERA);
           }
         },{
           text: 'Foto galerija',
           handler: () => {
-            this.getPhoto(this.camera.PictureSourceType.CAMERA);
+            this.getPhoto(this.camera.PictureSourceType.PHOTOLIBRARY);
           }
         }
       ]
