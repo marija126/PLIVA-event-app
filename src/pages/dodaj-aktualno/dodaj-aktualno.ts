@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController, Loading } from 
 import { AktualnoProvider } from '../../providers/aktualno/aktualno';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Transfer } from '@ionic-native/transfer';
+import { ActionSheetController } from 'ionic-angular';
 /**
  * Generated class for the DodajAktualnoPage page.
  *
@@ -26,7 +27,7 @@ slika;
 res;
 resFinal;
 loader: Loading;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private AktualnoProvider: AktualnoProvider, private camera: Camera, private transfer: Transfer, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private AktualnoProvider: AktualnoProvider, private camera: Camera, private transfer: Transfer, public loadingCtrl: LoadingController, public actionSheetCtrl: ActionSheetController) {
   
     this.user = JSON.parse(localStorage.getItem('wpToken'));
     this.autor = this.user.user_display_name;
@@ -42,11 +43,11 @@ addAktualno(){
 		
 	})
 }
-getPhoto () {
+getPhoto (selectedSourceType:number) {
   let options: CameraOptions = {
     quality: 100,
     destinationType: this.camera.DestinationType.DATA_URL,
-    sourceType: this.camera.PictureSourceType.CAMERA,
+    sourceType: selectedSourceType,
     allowEdit: false,
     encodingType: this.camera.EncodingType.PNG,
     mediaType: this.camera.MediaType.PICTURE,
@@ -62,6 +63,25 @@ getPhoto () {
     alert(err)
   })
 }
+  presentActionSheet() {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'Dodaj fotografiju',
+      buttons: [
+        {
+          text: 'Snimi fotografiju',
+          handler: () => {
+            this.getPhoto(this.camera.PictureSourceType.PHOTOLIBRARY);
+          }
+        },{
+          text: 'Foto galerija',
+          handler: () => {
+            this.getPhoto(this.camera.PictureSourceType.CAMERA);
+          }
+        }
+      ]
+    });
+    actionSheet.present();
+  }
 
 uploadPhoto() {
 //  this.presentLoading();

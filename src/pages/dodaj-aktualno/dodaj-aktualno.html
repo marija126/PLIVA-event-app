@@ -21,7 +21,7 @@
 		<ion-input type="text" placeholder="autor" [(ngModel)]="autor"></ion-input>
 	</div>
 	<div class="inputHolder">
-		<button block (click)="getPhoto()">DODAJ SLIKU</button>
+		<button block (click)="presentActionSheet()">DODAJ SLIKU</button>
 	</div>
 	<img [src]="imageURL" [hidden]="hideImage" style="width: 100%;" />
 	
@@ -29,7 +29,4 @@
 	<button class="loginButton" (click)="presentAlert()">ALERT</button>
 	<button class="loginButton" (click)="uploadPhoto()">DODAJ SLIKU</button>
 
-	<div>
-		<ion-input type="text" placeholder="{{resClean}}">{{resJSON}}</ion-input>
-	</div>
 </ion-content>
